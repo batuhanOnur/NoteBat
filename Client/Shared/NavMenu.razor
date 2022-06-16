@@ -1,0 +1,63 @@
+﻿@using NoteBat.Shared.NavigationList
+<div class="navContainer">
+    <div class="navTitle">
+        <div>
+            <p class="titleText">NoteBat</p>
+        </div>
+        <div>
+            <MudIcon Icon="@Icons.Filled.AddCircle" Color="Color.Tertiary"/>        
+        </div>
+    </div>
+
+    <div class="navList">
+        <ul class="navListParent">
+            @foreach(var item in navItemList ?? Enumerable.Empty<NavigationListItem>())
+            {
+                @if(item.ParentId == 0)
+                {
+                    <li class="navListElement" @onclick="() => OpenLink(item.Id)">
+                        <div class="textLink">
+                            <a href="#" class="textLink">@item.Name</a>
+                        </div>
+                        <div>
+                            <MudIcon Icon="@item.Icon" Style="@($"color:{Colors.Purple.Lighten5};")"/>
+                        </div>
+                    </li>
+                    @foreach(var subItem in navItemList ?? Enumerable.Empty<NavigationListItem>())
+                    {
+                        <li class="subItemElement">
+                        @if(item.Id == subItem.ParentId)
+                        {
+                          <div class="SubLink">
+                             <a href="#" class="textSubLink">@subItem.Name</a>
+                          </div>     
+                        }
+                        </li>
+                    }
+                }
+            }
+        </ul>
+    </div>
+</div>
+
+@code {
+    private bool isOpen = false;
+    private string currentIcon = @Icons.Filled.KeyboardArrowRight;
+
+    private NavigationListItem[]? navItemList = new NavigationListItem[]
+    {
+      new NavigationListItem { Id = 1, ParentId = 0, Name = "Matlı", Icon = @Icons.Filled.KeyboardArrowRight},
+      new NavigationListItem { Id = 2, ParentId = 0, Name = "Tarım Kredi", Icon = @Icons.Filled.KeyboardArrowRight},
+      new NavigationListItem { Id = 3, ParentId = 1, Name = "Polatlı", Icon = @Icons.Filled.KeyboardArrowRight},
+      new NavigationListItem { Id = 4, ParentId = 1, Name = "Turgutlu", Icon = @Icons.Filled.KeyboardArrowRight},
+      new NavigationListItem { Id = 5, ParentId = 1, Name = "Samsun", Icon = @Icons.Filled.KeyboardArrowRight},
+    };
+
+    private void OpenLink(int listItemId)
+    {
+        var clickedItem = navItemList.Where(x => x.Id == listItemId).FirstOrDefault();
+        isOpen = !isOpen;
+
+        clickedItem.Icon = isOpen ? @Icons.Filled.KeyboardArrowDown : @Icons.Filled.KeyboardArrowRight;
+    }
+}

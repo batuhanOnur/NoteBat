@@ -1,0 +1,16 @@
+.page[b-2b5zzonplj] {
+    width: 100vw;
+    height: 100vh;
+    background-color: #292b2f;
+    display: flex;
+}
+
+.sidebar[b-2b5zzonplj] {
+    flex: 1;
+    height: 100vh;
+    background-color: #212327;
+}
+
+.content[b-2b5zzonplj] {
+    flex: 5;
+}

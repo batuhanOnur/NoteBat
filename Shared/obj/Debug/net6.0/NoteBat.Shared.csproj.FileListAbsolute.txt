@@ -1,0 +1,12 @@
+C:\repos\blazor\NoteBat\Shared\bin\Debug\net6.0\NoteBat.Shared.deps.json
+C:\repos\blazor\NoteBat\Shared\bin\Debug\net6.0\NoteBat.Shared.dll
+C:\repos\blazor\NoteBat\Shared\bin\Debug\net6.0\NoteBat.Shared.pdb
+C:\repos\blazor\NoteBat\Shared\obj\Debug\net6.0\NoteBat.Shared.csproj.AssemblyReference.cache
+C:\repos\blazor\NoteBat\Shared\obj\Debug\net6.0\NoteBat.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\blazor\NoteBat\Shared\obj\Debug\net6.0\NoteBat.Shared.AssemblyInfoInputs.cache
+C:\repos\blazor\NoteBat\Shared\obj\Debug\net6.0\NoteBat.Shared.AssemblyInfo.cs
+C:\repos\blazor\NoteBat\Shared\obj\Debug\net6.0\NoteBat.Shared.csproj.CoreCompileInputs.cache
+C:\repos\blazor\NoteBat\Shared\obj\Debug\net6.0\NoteBat.Shared.dll
+C:\repos\blazor\NoteBat\Shared\obj\Debug\net6.0\refint\NoteBat.Shared.dll
+C:\repos\blazor\NoteBat\Shared\obj\Debug\net6.0\NoteBat.Shared.pdb
+C:\repos\blazor\NoteBat\Shared\obj\Debug\net6.0\ref\NoteBat.Shared.dll

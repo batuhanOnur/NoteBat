@@ -1,0 +1,16 @@
+.page {
+    width: 100vw;
+    height: 100vh;
+    background-color: #292b2f;
+    display: flex;
+}
+
+.sidebar {
+    flex: 1;
+    height: 100vh;
+    background-color: #212327;
+}
+
+.content {
+    flex: 5;
+}
