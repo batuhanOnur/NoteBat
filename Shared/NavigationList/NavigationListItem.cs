@@ -11,6 +11,7 @@ namespace NoteBat.Shared.NavigationList
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? Icon { get; set; }
+        public bool isOpen { get; set; }
         public int ParentId { get; set; }
     }
 }

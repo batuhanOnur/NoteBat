@@ -4,7 +4,7 @@
         <div>
             <p class="titleText">NoteBat</p>
         </div>
-        <div>
+        <div class="titleIcon">
             <MudIcon Icon="@Icons.Filled.AddCircle" Color="Color.Tertiary"/>        
         </div>
     </div>
@@ -26,41 +26,47 @@
                     
                     @foreach(var subItem in navItemList ?? Enumerable.Empty<NavigationListItem>())
                     {
-                        <li class="subItemElementContainer">
+                        
                         @if(item.Id == subItem.ParentId)
                         {
-                          <div class="subItemElement">
-                             <a href="#" class="textSubLink">@subItem.Name</a>
-                          </div>     
+                            <li class="@(item.isOpen ? "subItemElementContainer" : "subItemClose")">
+                              <div class="subItemElement">
+                                <div>
+                                   <hr/>
+                                </div>
+                                <div>
+                                   <a href="#" class="textSubLink">@subItem.Name</a>
+                                </div>
+                              </div>   
+                            </li>
                         }
-                        </li>
                     }
-
-                }
-                  
+                }   
             }
         </ul>
     </div>
 </div>
 
 @code {
-    private bool isOpen = false;
     private string currentIcon = @Icons.Filled.KeyboardArrowRight;
 
     private NavigationListItem[]? navItemList = new NavigationListItem[]
     {
-      new NavigationListItem { Id = 1, ParentId = 0, Name = "Matlı", Icon = @Icons.Filled.KeyboardArrowRight},
-      new NavigationListItem { Id = 2, ParentId = 0, Name = "Tarım Kredi", Icon = @Icons.Filled.KeyboardArrowRight},
-      new NavigationListItem { Id = 3, ParentId = 1, Name = "Polatlı", Icon = @Icons.Filled.KeyboardArrowRight},
-      new NavigationListItem { Id = 4, ParentId = 1, Name = "Turgutlu", Icon = @Icons.Filled.KeyboardArrowRight},
-      new NavigationListItem { Id = 5, ParentId = 1, Name = "Samsun", Icon = @Icons.Filled.KeyboardArrowRight},
+          new NavigationListItem { Id = 1, ParentId = 0, isOpen = false, Name = "Matlı", Icon = @Icons.Filled.KeyboardArrowRight},
+          new NavigationListItem { Id = 2, ParentId = 0, isOpen = false, Name = "Tarım Kredi", Icon = @Icons.Filled.KeyboardArrowRight},
+          new NavigationListItem { Id = 3, ParentId = 1, isOpen = false, Name = "Polatlı", Icon = @Icons.Filled.KeyboardArrowRight},
+          new NavigationListItem { Id = 4, ParentId = 1, isOpen = false, Name = "Turgutlu", Icon = @Icons.Filled.KeyboardArrowRight},
+          new NavigationListItem { Id = 5, ParentId = 2, isOpen = false, Name = "Sakarya", Icon = @Icons.Filled.KeyboardArrowRight},
+          new NavigationListItem { Id = 6, ParentId = 2, isOpen = false, Name = "Urfa", Icon = @Icons.Filled.KeyboardArrowRight},
+          new NavigationListItem { Id = 7, ParentId = 2, isOpen = false, Name = "Tire", Icon = @Icons.Filled.KeyboardArrowRight},
     };
 
     private void OpenLink(int listItemId)
     {
-        var clickedItem = navItemList.Where(x => x.Id == listItemId).FirstOrDefault();
-        isOpen = !isOpen;
+            var clickedItem = navItemList.Where(x => x.Id == listItemId).FirstOrDefault();
 
-        clickedItem.Icon = isOpen ? @Icons.Filled.KeyboardArrowDown : @Icons.Filled.KeyboardArrowRight;
+            clickedItem.isOpen = !clickedItem.isOpen;
+
+            clickedItem.Icon = clickedItem.isOpen ? @Icons.Filled.KeyboardArrowDown : @Icons.Filled.KeyboardArrowRight;
     }
 }

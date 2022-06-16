@@ -13,6 +13,11 @@
     justify-content: space-between;
 }
 
+.titleIcon[b-xen2felzzx] {
+    margin-right: 4%;
+    cursor: pointer;
+}
+
 .navListParent[b-xen2felzzx] {
     padding: 5px;
     margin-left: 20px;
@@ -24,15 +29,23 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .subItemElement[b-xen2felzzx] {
     /*margin-bottom: 20px;*/
-    padding: 10px;
+    display: flex;
+    margin-left: 5%;
+}
+
+.subItemClose[b-xen2felzzx] {
+    display: none;
 }
 
 .subItemElementContainer[b-xen2felzzx] {
+    justify-content: center;
     border-left: 1px solid #54565a;
+    height: 100%;
 }
 
 .textSubLink[b-xen2felzzx] {
