@@ -23,18 +23,21 @@
                             <MudIcon Icon="@item.Icon" Style="@($"color:{Colors.Purple.Lighten5};")"/>
                         </div>
                     </li>
+                    
                     @foreach(var subItem in navItemList ?? Enumerable.Empty<NavigationListItem>())
                     {
-                        <li class="subItemElement">
+                        <li class="subItemElementContainer">
                         @if(item.Id == subItem.ParentId)
                         {
-                          <div class="SubLink">
+                          <div class="subItemElement">
                              <a href="#" class="textSubLink">@subItem.Name</a>
                           </div>     
                         }
                         </li>
                     }
+
                 }
+                  
             }
         </ul>
     </div>

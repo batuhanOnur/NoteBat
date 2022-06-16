@@ -198,14 +198,14 @@
       "netstandard.dll": "sha256-qpOz\/RBwhlIYfaE2GDEmjiproxkvSf2b9GeqHxvH+lg=",
       "System.Private.CoreLib.dll": "sha256-sfzSZ3YKC2rpF77TVOKLuPgQag93QXr9U4AUc9d\/LKA=",
       "NoteBat.Shared.dll": "sha256-nEA538n59h33QG6bwxGtSAiOUek6Dh2QwHGXiIV\/E9w=",
-      "NoteBat.Client.dll": "sha256-LMm0h29s5LkPMEVENuIq3KKZS3OD5bRKDz\/7TxGNDPo="
+      "NoteBat.Client.dll": "sha256-Cg446hrBzMT4LZFr62DBB4IIbRy54UZQFim8XQ73nEw="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "NoteBat.Shared.pdb": "sha256-xA2rfZT3LjQyA4UqYP0mNB4gYTCbkFLWqlbJAvjWhX0=",
-      "NoteBat.Client.pdb": "sha256-E7fLv5mThQ3QSRBHXOU32r3JLZ68XABVFTMNEoj4noE="
+      "NoteBat.Client.pdb": "sha256-kzoJ+h1wdH1Hots8mKihzaWNcibeW4HnXe0cvIEXDGY="
     },
     "runtime": {
       "dotnet.6.0.5.bcgcf419za.js": "sha256-783uOt0jgblQfP6Yz5TJeuW2xxtl6UHZQPngZtCz79U=",

@@ -27,18 +27,18 @@
 }
 
 .subItemElement {
-    margin-bottom: 20px;
-    background-color: pink;
+    /*margin-bottom: 20px;*/
+    padding: 10px;
 }
 
 .subItemElementContainer {
-    background-color: pink;
     border-left: 1px solid #54565a;
 }
 
 .textSubLink {
-    margin-left: 20%;
+    /*margin-left: 20%;*/
 }
+
 
 .textLink {
     color: #fff !important;
@@ -46,4 +46,5 @@
 
 .textSubLink {
     color: #8b919b !important;
+    margin-bottom: 20px;
 }

@@ -45,18 +45,18 @@
 }
 
 .subItemElement[b-xen2felzzx] {
-    margin-bottom: 20px;
-    background-color: pink;
+    /*margin-bottom: 20px;*/
+    padding: 10px;
 }
 
 .subItemElementContainer[b-xen2felzzx] {
-    background-color: pink;
     border-left: 1px solid #54565a;
 }
 
 .textSubLink[b-xen2felzzx] {
-    margin-left: 20%;
+    /*margin-left: 20%;*/
 }
+
 
 .textLink[b-xen2felzzx] {
     color: #fff !important;
@@ -64,4 +64,5 @@
 
 .textSubLink[b-xen2felzzx] {
     color: #8b919b !important;
+    margin-bottom: 20px;
 }
