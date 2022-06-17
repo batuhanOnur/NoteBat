@@ -35,6 +35,27 @@
     justify-content: space-between;
 }
 
+
+.noteInput[b-xen2felzzx] {
+    width: 120px;
+    background-color: #292b2f;
+    border-bottom: 1px solid green;
+    color: #fff;
+    padding: 2px;
+}
+.inputParent[b-xen2felzzx] {
+    position: relative;
+}
+.inputChild[b-xen2felzzx] {
+    position: absolute;
+    top:0;
+    right: 15px;
+    cursor: pointer;
+}
+.noteInput:focus[b-xen2felzzx] {
+   outline: none;
+}
+
 .titleIcon[b-xen2felzzx] {
     margin-right: 1%;
     cursor: pointer;

@@ -8,7 +8,7 @@
         <div>
             <p class="titleText">NoteBat</p>
         </div>
-        <div class="titleIcon" @onclick="openAddNoteDialog">
+        <div class="titleIcon" @onclick="OpenAddNoteDialog">
             <MudIcon Icon="@Icons.Filled.AddCircle" Color="Color.Tertiary"/>        
         </div>
     </div>
@@ -50,11 +50,20 @@
                     }
                 }
             }
-            <li>
-                <div>
-                    <input type="text" @bind="InputValue" @bind:event="oninput" @onkeydown="AddNote"/>
-                </div>
-            </li>
+            @if (DisplayInput)
+            {
+                <li class="noteInputContainer">
+                    <div class="inputParent">
+                        <div>
+                            <input type="text" class="noteInput" @bind="InputValue" @bind:event="oninput" @onkeydown="AddNote"/>
+                        </div>
+                        <div class="inputChild" @onclick="CloseInput">
+                             <MudIcon Icon="@Icons.Filled.Close" Color="Color.Default" Size="Size.Small"/>
+                        </div>
+                    </div >
+                    
+                </li>
+            }
         </ul>
     </div>
 </div>
@@ -73,6 +82,7 @@
 
     private string currentIcon = @Icons.Filled.KeyboardArrowRight;
     private string? InputValue { get; set; }
+    private bool DisplayInput = false;
 
     private void OpenLink(int listItemId)
     {
@@ -83,10 +93,15 @@
         clickedItem.Icon = clickedItem.IsOpen ? @Icons.Filled.KeyboardArrowDown : @Icons.Filled.KeyboardArrowRight;
     }
 
-    private void openAddNoteDialog()
+    private void OpenAddNoteDialog()
     {
-        var options = new DialogOptions { CloseOnEscapeKey = true };
-        DialogService.Show<NewParentNote>("Yeni Başlık Ekle", options);
+        DisplayInput = true;
+    }
+
+    private void CloseInput()
+    {
+        DisplayInput = false;
+        InputValue = "";
     }
 
     private void AddNote(KeyboardEventArgs args)
@@ -100,10 +115,9 @@
                 Name = InputValue,
                 Icon = @Icons.Filled.KeyboardArrowRight
             };
-
             navItemList.Add(newNote);
+            CloseInput();  
         }
-
     }
 
     private void ParentHover(int parentId)

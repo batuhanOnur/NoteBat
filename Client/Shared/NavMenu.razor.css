@@ -13,6 +13,27 @@
     justify-content: space-between;
 }
 
+
+.noteInput {
+    width: 120px;
+    background-color: #292b2f;
+    border-bottom: 1px solid green;
+    color: #fff;
+    padding: 2px;
+}
+.inputParent {
+    position: relative;
+}
+.inputChild {
+    position: absolute;
+    top:0;
+    right: 15px;
+    cursor: pointer;
+}
+.noteInput:focus {
+   outline: none;
+}
+
 .titleIcon {
     margin-right: 1%;
     cursor: pointer;
