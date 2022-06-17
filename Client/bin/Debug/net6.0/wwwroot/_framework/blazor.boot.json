@@ -197,18 +197,18 @@
       "mscorlib.dll": "sha256-zNVxhWqav+Wvwc8mjOqsl40bhVLw78MhgITrphqoROc=",
       "netstandard.dll": "sha256-yQ7oiuGXRX47V21EibXbfTPXOkJGOgCJhW9YF6e4hw0=",
       "System.Private.CoreLib.dll": "sha256-Ug2\/rd8Ck7Dls6uaZNmrqc7EvE8f41iX96qdX57LStQ=",
-      "NoteBat.Shared.dll": "sha256-IxiC1DyU9KOkd73K8GIECGnf1mbKxGBcLRHxWuFrdAQ=",
-      "NoteBat.Client.dll": "sha256-mOhrrPGha9BF3rIum\/3kpgOfFn\/TBIU3hDrhMP9S4Z0="
+      "NoteBat.Shared.dll": "sha256-84m+SpBm1IY0mCnX05uI4yM1LidqfTalAZQUPJr+MQ4=",
+      "NoteBat.Client.dll": "sha256-Lz93wBjLopiZEOCA5Gz4zmfxJtQ\/iykELR0KGtKzERg="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "NoteBat.Shared.pdb": "sha256-zh0U1oaX7NUT\/8RMTvBpAjq60lQYtWvnN5Pt34UpZQU=",
-      "NoteBat.Client.pdb": "sha256-uBV46YDJ+fi0pFsDUnorhtLIjDTJPxJ\/AzRX54PmU9g="
+      "NoteBat.Shared.pdb": "sha256-b13q5OPa4ofMbyTIOCw4RP6bNDkfTmYfzBpOsE98tWM=",
+      "NoteBat.Client.pdb": "sha256-w30EB67nfQt\/n3+mS0hi8+IKj8uJ3GVPtSkHRHOxGoU="
     },
     "runtime": {
-      "dotnet.6.0.6.u07ua4qckt.js": "sha256-zJXgw\/tAzTVOXksPhtpZVT12vxHC7S9mQyBRM36dwD0=",
+      "dotnet.6.0.6.hvih33kj12.js": "sha256-zJXgw\/tAzTVOXksPhtpZVT12vxHC7S9mQyBRM36dwD0=",
       "dotnet.timezones.blat": "sha256-44J\/Hf\/X8VbgiBAazDB8c0FaVrAFYOb4BbGyQwuzNyk=",
       "dotnet.wasm": "sha256-7ztgS00L0vMX+5Rc13tr7XCDeLM\/7gYJa53RJO7XTKo=",
       "icudt.dat": "sha256-Zuq0dWAsBm6\/2lSOsz7+H9PvFaRn61KIXHMMwXDfvyE=",

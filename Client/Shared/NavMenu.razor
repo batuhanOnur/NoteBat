@@ -1,72 +1,118 @@
-﻿@using NoteBat.Shared.NavigationList
+﻿@using NoteBat.Client.Dialogs
+@using NoteBat.Shared.NavigationList
+@inject IJSRuntime JS
+@inject IDialogService DialogService
+
 <div class="navContainer">
     <div class="navTitle">
         <div>
             <p class="titleText">NoteBat</p>
         </div>
-        <div class="titleIcon">
+        <div class="titleIcon" @onclick="openAddNoteDialog">
             <MudIcon Icon="@Icons.Filled.AddCircle" Color="Color.Tertiary"/>        
         </div>
     </div>
 
     <div class="navList">
         <ul class="navListParent">
-            @foreach(var item in navItemList ?? Enumerable.Empty<NavigationListItem>())
+            @foreach (var item in navItemList ?? Enumerable.Empty<NavigationListItem>())
             {
-                @if(item.ParentId == 0)
+                @if (item.ParentId == 0)
                 {
-                    <li class="navListElement" @onclick="() => OpenLink(item.Id)">
+                    <li class="navListElement" @onclick="() => OpenLink(item.Id)" @onmouseover="() => ParentHover(item.Id)" @onmouseleave="() => ParentHoverLeave(item.Id)">
                         <div class="textLink">
                             <a href="#" class="textLink">@item.Name</a>
                         </div>
                         <div>
+                            <div id="@item.Id" class="addSubIcon">
+                                <MudIcon Icon="@Icons.Filled.Add" Color="Color.Default" Size="Size.Small"/>
+                            </div>
                             <MudIcon Icon="@item.Icon" Style="@($"color:{Colors.Purple.Lighten5};")"/>
                         </div>
                     </li>
-                    
-                    @foreach(var subItem in navItemList ?? Enumerable.Empty<NavigationListItem>())
+
+                    @foreach (var subItem in navItemList ?? Enumerable.Empty<NavigationListItem>())
                     {
-                        
-                        @if(item.Id == subItem.ParentId)
+
+                        @if (item.Id == subItem.ParentId)
                         {
-                            <li class="@(item.isOpen ? "subItemElementContainer" : "subItemClose")">
-                              <div class="subItemElement">
-                                <div>
-                                   <hr/>
-                                </div>
-                                <div>
-                                   <a href="#" class="textSubLink">@subItem.Name</a>
-                                </div>
-                              </div>   
+                            <li class="@(item.IsOpen ? "subItemElementContainer" : "subItemClose")">
+                                <div class="subItemElement">
+                                    <div class="subItemNodeContainer">
+                                        <hr class="subItemNode"/>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="textSubLink">@subItem.Name</a>
+                                    </div>
+                                </div>   
                             </li>
                         }
                     }
-                }   
+                }
             }
+            <li>
+                <div>
+                    <input type="text" @bind="InputValue" @bind:event="oninput" @onkeydown="AddNote"/>
+                </div>
+            </li>
         </ul>
     </div>
 </div>
 
 @code {
-    private string currentIcon = @Icons.Filled.KeyboardArrowRight;
-
-    private NavigationListItem[]? navItemList = new NavigationListItem[]
+    private List<NavigationListItem> navItemList = new List<NavigationListItem>()
     {
-          new NavigationListItem { Id = 1, ParentId = 0, isOpen = false, Name = "Matlı", Icon = @Icons.Filled.KeyboardArrowRight},
-          new NavigationListItem { Id = 2, ParentId = 0, isOpen = false, Name = "Tarım Kredi", Icon = @Icons.Filled.KeyboardArrowRight},
-          new NavigationListItem { Id = 3, ParentId = 1, isOpen = false, Name = "Polatlı", Icon = @Icons.Filled.KeyboardArrowRight},
-          new NavigationListItem { Id = 4, ParentId = 1, isOpen = false, Name = "Turgutlu", Icon = @Icons.Filled.KeyboardArrowRight},
-          new NavigationListItem { Id = 5, ParentId = 2, isOpen = false, Name = "Sakarya", Icon = @Icons.Filled.KeyboardArrowRight},
-          new NavigationListItem { Id = 6, ParentId = 2, isOpen = false, Name = "Urfa", Icon = @Icons.Filled.KeyboardArrowRight},
-          new NavigationListItem { Id = 7, ParentId = 2, isOpen = false, Name = "Tire", Icon = @Icons.Filled.KeyboardArrowRight},
+        new NavigationListItem { Id = 1, ParentId = 0, IsOpen = false, Name = "Matlı", Icon = @Icons.Filled.KeyboardArrowRight},
+        new NavigationListItem { Id = 2, ParentId = 0, IsOpen = false, Name = "Tarım Kredi", Icon = @Icons.Filled.KeyboardArrowRight},
+        new NavigationListItem { Id = 3, ParentId = 1, IsOpen = false, Name = "Polatlı", Icon = @Icons.Filled.KeyboardArrowRight},
+        new NavigationListItem { Id = 4, ParentId = 1, IsOpen = false, Name = "Turgutlu", Icon = @Icons.Filled.KeyboardArrowRight},
+        new NavigationListItem { Id = 5, ParentId = 2, IsOpen = false, Name = "Sakarya", Icon = @Icons.Filled.KeyboardArrowRight},
+        new NavigationListItem { Id = 6, ParentId = 2, IsOpen = false, Name = "Urfa", Icon = @Icons.Filled.KeyboardArrowRight},
+        new NavigationListItem { Id = 7, ParentId = 2, IsOpen = false, Name = "Tire", Icon = @Icons.Filled.KeyboardArrowRight},
     };
+
+    private string currentIcon = @Icons.Filled.KeyboardArrowRight;
+    private string? InputValue { get; set; }
 
     private void OpenLink(int listItemId)
     {
-            var clickedItem = navItemList.Where(x => x.Id == listItemId).FirstOrDefault();
+        var clickedItem = navItemList.Where(x => x.Id == listItemId).FirstOrDefault();
 
-            clickedItem.isOpen = !clickedItem.isOpen;
+        clickedItem.IsOpen = !clickedItem.IsOpen;
 
-            clickedItem.Icon = clickedItem.isOpen ? @Icons.Filled.KeyboardArrowDown : @Icons.Filled.KeyboardArrowRight;
+        clickedItem.Icon = clickedItem.IsOpen ? @Icons.Filled.KeyboardArrowDown : @Icons.Filled.KeyboardArrowRight;
+    }
+
+    private void openAddNoteDialog()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<NewParentNote>("Yeni Başlık Ekle", options);
+    }
+
+    private void AddNote(KeyboardEventArgs args)
+    {
+        if(args.Code == "Enter")
+        {
+            NavigationListItem newNote = new NavigationListItem
+            {
+                Id = 8,
+                ParentId = 0,
+                Name = InputValue,
+                Icon = @Icons.Filled.KeyboardArrowRight
+            };
+
+            navItemList.Add(newNote);
+        }
+
+    }
+
+    private void ParentHover(int parentId)
+    {
+        JS.InvokeVoidAsync("addHoveredClass",parentId);
+    }
+
+    private void ParentHoverLeave(int parentId)
+    {
+        JS.InvokeVoidAsync("removeHoveredClass",parentId);
     }
 }

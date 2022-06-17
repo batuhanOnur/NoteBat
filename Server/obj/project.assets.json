@@ -1147,26 +1147,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\batuhan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\batuh\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Server\\NoteBat.Server.csproj",
+      "projectUniqueName": "C:\\repos\\blazor\\NoteBat\\Server\\NoteBat.Server.csproj",
       "projectName": "NoteBat.Server",
-      "projectPath": "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Server\\NoteBat.Server.csproj",
-      "packagesPath": "C:\\Users\\batuhan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Server\\obj\\",
+      "projectPath": "C:\\repos\\blazor\\NoteBat\\Server\\NoteBat.Server.csproj",
+      "packagesPath": "C:\\Users\\batuh\\.nuget\\packages\\",
+      "outputPath": "C:\\repos\\blazor\\NoteBat\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\batuhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\batuh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1180,11 +1177,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Client\\NoteBat.Client.csproj": {
-              "projectPath": "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Client\\NoteBat.Client.csproj"
+            "C:\\repos\\blazor\\NoteBat\\Client\\NoteBat.Client.csproj": {
+              "projectPath": "C:\\repos\\blazor\\NoteBat\\Client\\NoteBat.Client.csproj"
             },
-            "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj": {
-              "projectPath": "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj"
+            "C:\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj": {
+              "projectPath": "C:\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj"
             }
           }
         }

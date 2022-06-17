@@ -1,3 +1,7 @@
+/* /Dialogs/NewParentNote.razor.rz.scp.css */
+.dialogContainer[b-dey8q8gf1g] {
+    width: 800px;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-2b5zzonplj] {
     width: 100vw;
@@ -32,7 +36,7 @@
 }
 
 .titleIcon[b-xen2felzzx] {
-    margin-right: 4%;
+    margin-right: 1%;
     cursor: pointer;
 }
 
@@ -40,6 +44,16 @@
     padding: 5px;
     margin-left: 20px;
     width: 85%;
+}
+
+.subItemNode[b-xen2felzzx] {
+    width: 15px;
+    border: 1px solid #54565a;
+}
+
+.subItemNodeContainer[b-xen2felzzx] {
+    margin-left: -5%;
+    margin-right: 5%;
 }
 
 .navListElement[b-xen2felzzx] {
@@ -50,10 +64,29 @@
     margin-top: 20px;
 }
 
+.navListHoverElement[b-xen2felzzx] {
+    background-color: #292b2f;
+    border-radius: 10px;
+}
+
+.navListAddElement[b-xen2felzzx] {
+    background-color: orange;
+}
+
 .subItemElement[b-xen2felzzx] {
     /*margin-bottom: 20px;*/
     display: flex;
+    align-items: center;
     margin-left: 5%;
+}
+
+.addSubIcon[b-xen2felzzx] {
+    display: none;
+}
+
+.hoveredSubIcon[b-xen2felzzx] {
+    display: inline-block;
+    cursor: pointer;
 }
 
 .subItemClose[b-xen2felzzx] {

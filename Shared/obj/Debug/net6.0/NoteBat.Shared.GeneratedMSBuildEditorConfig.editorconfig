@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows,browser
 build_property.RootNamespace = NoteBat.Shared
-build_property.ProjectDir = C:\Users\batuhan\Desktop\repos\blazor\NoteBat\Shared\
+build_property.ProjectDir = C:\repos\blazor\NoteBat\Shared\

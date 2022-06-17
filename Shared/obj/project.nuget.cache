@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/6p8WYuYl/8T3TcYWcx77kI8Fcw2hha2Mh9xianUViSqXignzZ2jG4UXA+XBcxpWsSZgAa+W1x1neGQLi6j/uQ==",
+  "dgSpecHash": "bBkRlusCTyXfNIFG4UgSKzbHZoediUHimjhB1M5SdK7M8LyBdRtxRbjgP0A2w+39xJtP/RroZQB3RQHkuKKTFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj",
+  "projectFilePath": "C:\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

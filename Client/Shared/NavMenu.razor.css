@@ -14,7 +14,7 @@
 }
 
 .titleIcon {
-    margin-right: 4%;
+    margin-right: 1%;
     cursor: pointer;
 }
 
@@ -22,6 +22,16 @@
     padding: 5px;
     margin-left: 20px;
     width: 85%;
+}
+
+.subItemNode {
+    width: 15px;
+    border: 1px solid #54565a;
+}
+
+.subItemNodeContainer {
+    margin-left: -5%;
+    margin-right: 5%;
 }
 
 .navListElement {
@@ -32,10 +42,29 @@
     margin-top: 20px;
 }
 
+.navListHoverElement {
+    background-color: #292b2f;
+    border-radius: 10px;
+}
+
+.navListAddElement {
+    background-color: orange;
+}
+
 .subItemElement {
     /*margin-bottom: 20px;*/
     display: flex;
+    align-items: center;
     margin-left: 5%;
+}
+
+.addSubIcon {
+    display: none;
+}
+
+.hoveredSubIcon {
+    display: inline-block;
+    cursor: pointer;
 }
 
 .subItemClose {

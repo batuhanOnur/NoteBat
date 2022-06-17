@@ -8,10 +8,10 @@ namespace NoteBat.Shared.NavigationList
 {
     public class NavigationListItem
     {
-        public int Id { get; set; }
+        public int Id { get; set;}
         public string? Name { get; set; }
         public string? Icon { get; set; }
-        public bool isOpen { get; set; }
+        public bool IsOpen { get; set; } = false;
         public int ParentId { get; set; }
     }
 }

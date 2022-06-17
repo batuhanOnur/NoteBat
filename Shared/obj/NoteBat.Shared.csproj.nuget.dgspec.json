@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj": {}
+    "C:\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj": {
+    "C:\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj",
+        "projectUniqueName": "C:\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj",
         "projectName": "NoteBat.Shared",
-        "projectPath": "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj",
-        "packagesPath": "C:\\Users\\batuhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\batuhan\\Desktop\\repos\\blazor\\NoteBat\\Shared\\obj\\",
+        "projectPath": "C:\\repos\\blazor\\NoteBat\\Shared\\NoteBat.Shared.csproj",
+        "packagesPath": "C:\\Users\\batuh\\.nuget\\packages\\",
+        "outputPath": "C:\\repos\\blazor\\NoteBat\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\batuhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\batuh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
